@@ -85,6 +85,7 @@ h1 a {
 	font-family: Raleway, Helvetica;
 	font-size: 48px;
 	text-decoration: none;
+	color: black;
 }
 
 h1 a:active {

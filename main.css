@@ -77,6 +77,26 @@ p {
 	font-family: Raleway, Helvetica;
 }
 
+h1 {
+	padding-bottom: 20px;
+}
+
+h1 a {
+	font-family: Raleway, Helvetica;
+	font-size: 48px;
+	text-decoration: none;
+}
+
+h1 a:active {
+	font-size: 48px;
+	color: black;
+}
+
+h1 a:visited {
+	font-size: 48px;
+	color: black;
+}
+
 .nav {
 	width: 20%;
 	display: -webkit-box;

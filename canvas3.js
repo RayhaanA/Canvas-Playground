@@ -14,7 +14,7 @@ context.fillRect(0, 0, width, height);
 function Particle() {
 	this.x = Math.random() * width;
 	this.y = Math.random() * height;
-	this.velocity = 3;
+	this.velocity = Math.random() * 2 + 1;
 	this.radius = 0;
 	this.rotAngle = Math.random() * 360;
 	this.colour = "rgb(" + Math.floor(Math.random() * 255) + ","
@@ -44,7 +44,7 @@ function draw() {
 
 		for(var n = 0; n < numParticles; n++) {
 			var distance = Math.sqrt(Math.pow(particles[n].x - particles[i].x, 2) + Math.pow(particles[n].y - particles[i].y, 2));
-			if(distance < 150) {
+			if(distance < 200) {
 				context.beginPath();
 				context.lineWidth = particles[i].lineWeight;
 				context.moveTo(particles[i].x, particles[i].y);

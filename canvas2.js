@@ -16,8 +16,8 @@ context.fillRect(0, 0, width, height);
 function Particle() {
 	this.x = Math.random() * width;
 	this.y = Math.random() * height;
-	this.vx = Math.random() * 12 - 4;
-	this.vy = Math.random() * 12 - 4;
+	this.vx = Math.random() * 8 - 4;
+	this.vy = Math.random() * 8 - 4;
 	this.radius = Math.random() * 20 + 10;
 	this.colour = "rgb(" + Math.floor(Math.random() * 255) + ","
 								+ Math.floor(Math.random() * 255) + ","
@@ -89,4 +89,9 @@ canvas.addEventListener("click", function() {
 }, false);
 
 //Loop
-setInterval(draw, 30);
+function loop() {
+	draw();
+	requestAnimationFrame(loop);
+}
+
+requestAnimationFrame(loop);

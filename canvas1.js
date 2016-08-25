@@ -50,11 +50,8 @@ function start(mouseX, mouseY) {
 	for(var i = 0; i < numParticles; i++) {
 		particles.push(new Particle(mouseX, mouseY));
 	}
-	//Main loop
-	var loop = setInterval(function() { draw();
-													if(particles.length === 0)
-														clearInterval(loop);
-												}, 20);
+	//Start loop
+	requestAnimationFrame(loop);
 }
 
 //On click function, for program to draw, requires previous explosion array
@@ -69,3 +66,11 @@ canvas.addEventListener("click", function(e) {
 	 if(particles.length == 0)
  		start(x, y);
  }, false);
+
+ //Main loop
+ function loop() {
+	 draw();
+	 if(particles.length === 0)
+		 clearAnimationFrame(loop);
+	 requestAnimationFrame(loop);
+ }

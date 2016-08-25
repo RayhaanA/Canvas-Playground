@@ -44,7 +44,7 @@ function draw() {
 
 		for(var n = 0; n < numParticles; n++) {
 			var distance = Math.sqrt(Math.pow(particles[n].x - particles[i].x, 2) + Math.pow(particles[n].y - particles[i].y, 2));
-			if(distance < 200) {
+			if(distance < 150) {
 				context.beginPath();
 				context.lineWidth = particles[i].lineWeight;
 				context.moveTo(particles[i].x, particles[i].y);
@@ -85,5 +85,8 @@ canvas.addEventListener("keydown", function(e) {
 	}
 }, true);
 
-
-setInterval(draw, 50);
+function loop() {
+	draw();
+	requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);

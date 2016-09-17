@@ -5,6 +5,7 @@
 }
 
 body, html {
+	font-family: Raleway;
 	height: 100vh;
 	width: 100%;
 }
@@ -29,26 +30,39 @@ body, html {
 }
 
 canvas {
+	display: block;
 	padding: 5px;
 	border: 5px black solid;
 	border-radius: 5px;
 }
 
+#four {
+	padding: 0;
+	border: 5px black solid;
+	border-radius: 5px;
+}
+
+#stroke {
+	display: inline;
+}
+
+input {
+	display: inline;
+}
 p {
 	padding-top: 3px;
-	padding-bottom: 5px;
 	font-family: Raleway, Helvetica;
+	padding-bottom: 15px;
 }
 
 h1 {
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 h1 a {
 	font-family: Raleway, Helvetica;
 	font-size: 48px;
 	text-decoration: none;
-	color: black;
 }
 
 h1 a:active {
